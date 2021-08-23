@@ -123,7 +123,6 @@ export default {
   created: function () {
   },
   methods:{
-    handleEdit(item){}
   }
 };
 </script>

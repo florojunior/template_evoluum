@@ -12,8 +12,8 @@
                     color="primary"
                     dark
                     v-bind="attrs"
-                    v-on="on"
                     icon
+                    v-on="on"
                 >
                     <v-icon color="white">
                         mdi-menu-down
@@ -40,7 +40,6 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex';
 
 export default {
   data: () => ({

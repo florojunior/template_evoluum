@@ -16,9 +16,14 @@
 import PageTitle from '@/components/template/PageTitle.vue';
 
 export default {
-  props: ['addTitle'],
   components: {
     PageTitle,
+  },
+  props: {
+    addTitle:  {
+      type: String,
+      required: true,
+    }
   },
 };
 </script>

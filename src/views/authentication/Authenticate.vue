@@ -73,11 +73,8 @@ import Products from './../../services/api/Products'
 
 import { emailRules, passwordRules } from '@/validations';
 
-import Logo from '@/components/template/Logo.vue';
-
 export default {
   components: {
-    Logo,
   },
   data() {
     return {
@@ -104,14 +101,14 @@ export default {
       showPassword: false,
     };
   },
-  mounted(){
-    const products = new Products();
-    products.save();
-    console.log(products);
-  },
   computed: {
     ...mapGetters('authentication', ['loginLoading']),
   },
+  mounted(){
+    const products = new Products();
+    products.save();
+  },
+  
   methods: {
     ...mapActions('authentication', ['setMode', 'handleLogin']),
     ...mapActions('modal', ['showModal']),

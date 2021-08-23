@@ -26,14 +26,12 @@
 <script>
 import { mapGetters, mapActions } from 'vuex';
 
-import ForgotPassword from '@/views/authentication/ForgotPassword';
 import Authenticate from '@/views/authentication/Authenticate';
 
 export default {
   name: 'Login',
   components: {
-    Authenticate,
-    ForgotPassword
+    Authenticate
   },
   computed: {
     ...mapGetters('authentication', ['mode']),

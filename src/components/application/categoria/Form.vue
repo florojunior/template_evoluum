@@ -16,10 +16,8 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
 
-import PageHeader from '@/components/template/PageHeader.vue'
-import EditButton from '@/components/template/buttons/EditButton.vue';
 import StepController from '../categoria/Steps/StepController.vue'
 import FormStepOne from '../categoria/Steps/FormStepOne.vue'
 import FormStepTwo from '../categoria/Steps/FormStepTwo.vue'
@@ -27,8 +25,6 @@ import FormStepThree from '../categoria/Steps/FormStepThree.vue'
 
 export default {
   components: {
-      PageHeader,
-      EditButton,
       StepController,
       FormStepOne,
       FormStepTwo,
@@ -99,13 +95,12 @@ export default {
       }
     ]
   }),
-  created: function () {
-  },
   computed:{
     ...mapGetters('categoria', ['getCurrentStep']),
   },
+  created: function () {
+  },  
   methods:{
-    handleEdit(item){}
   }
 };
 </script>

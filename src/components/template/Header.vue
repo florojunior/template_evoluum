@@ -55,18 +55,19 @@
 
 <script>
 import router from '../../router';
-import { mapGetters, mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
 
 export default {
-  computed: {
-    ...mapGetters('authentication', ['menu']),
-  },
+
   data: () => ({
     drawer: false,
     itemMenu: true,
   }),
-  created: function () {
+  computed: {
+    ...mapGetters('authentication', ['menu']),
   },
+  created: function () {
+  },  
   methods: {
     logout() {
       localStorage.setItem('token', null);

@@ -150,13 +150,11 @@
 
 <script>
 
-import Form from '@/components/application/categoria/Form.vue'
 import LabelForm from '@/components/template/label/LabelForm.vue'
 import InputAndLabelForm from '@/components/template/label/InputAndLabelForm.vue'
 
 export default {
   components:{
-    Form,
     LabelForm,
     InputAndLabelForm
   },

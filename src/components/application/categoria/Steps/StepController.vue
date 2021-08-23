@@ -3,8 +3,8 @@
       <v-col>
         <v-btn
           icon
-          @click="onClick"
           color="primary"
+          @click="onClick"
         >
           <v-icon>mdi-arrow-left</v-icon> 
         </v-btn>
@@ -28,12 +28,11 @@
 
 <script>
 
-import Form from '@/components/application/categoria/Form.vue'
-import { mapGetters, mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
 
 export default {
   components:{
-    Form
+
   },
   data: () => ({
       steppers:{}
