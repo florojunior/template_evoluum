@@ -69,8 +69,6 @@
 <script>
 import { mapActions, mapGetters } from 'vuex';
 
-import Products from './../../services/api/Products'
-
 import { emailRules, passwordRules } from '@/validations';
 
 import router from '../../router';
@@ -107,8 +105,6 @@ export default {
     ...mapGetters('authentication', ['loginLoading']),
   },
   mounted(){
-    const products = new Products();
-    //products.save();
   },
   
   methods: {
