@@ -3,14 +3,14 @@
       <div class="background">
         <div class="background-custom">
           <v-img
-              src="@/assets/images/header-image.png"
+              :src="require('../../assets/images/header-image.png').default"
               max-width="156px"
               max-heigth="54px"
               class="ml-8 mt-8">
           </v-img>
         </div>
         <v-img
-            src="@/assets/images/figura_painel.png"
+            :src="require('../../assets/images/figura_painel.png').default"
             class="background-image"
             >
         </v-img>

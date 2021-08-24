@@ -5,6 +5,7 @@
       <v-btn
         depressed
         color="primary"
+        @click="goForm()"
       >
         {{addTitle}}
       </v-btn>
@@ -14,6 +15,7 @@
 
 <script>
 import PageTitle from '@/components/template/PageTitle.vue';
+import router from '@/router';
 
 export default {
   components: {
@@ -23,8 +25,17 @@ export default {
     addTitle:  {
       type: String,
       required: true,
+    },
+    routerPath:  {
+      type: String,
+      required: true,
     }
   },
+  methods:{
+    goForm(){
+      router.push(this.routerPath);
+    }
+  }
 };
 </script>
 

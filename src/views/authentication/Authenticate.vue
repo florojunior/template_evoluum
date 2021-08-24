@@ -73,6 +73,8 @@ import Products from './../../services/api/Products'
 
 import { emailRules, passwordRules } from '@/validations';
 
+import router from '../../router';
+
 export default {
   components: {
   },
@@ -106,7 +108,7 @@ export default {
   },
   mounted(){
     const products = new Products();
-    products.save();
+    //products.save();
   },
   
   methods: {
@@ -114,7 +116,8 @@ export default {
     ...mapActions('modal', ['showModal']),
     async submitForm() {
       if (this.$refs.form.validate()) {
-        await this.handleLogin({ login: this.email, password: this.password });
+        router.push('/categoria');
+        //await this.handleLogin({ login: this.email, password: this.password });
       }
     },
   },

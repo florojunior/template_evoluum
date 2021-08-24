@@ -3,7 +3,7 @@
     <div style="height: 100%; width: 100%">
       <v-row class="d-flex flex-column justify-start align-start">
         <v-col cols=12>
-          <PageHeader addTitle="Adicionar Categoria"/>
+          <PageHeader addTitle="Adicionar Categoria" routerPath="/categoria/form"/>
         </v-col>
         <v-col cols=12 class="d-flex justify-space-between">
           <v-text-field

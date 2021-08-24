@@ -6,24 +6,25 @@
       class="custom-header-background larger-menu d-flex align-center justify-space-between"
     >
         <v-img
-            src="@/assets/images/header-image.png"
-            max-width="156px"
-            max-heigth="54px">
-        </v-img>
+              :src="require('../../assets/images/header-image.png').default"
+              max-width="156px"
+              max-heigth="54px"
+              class="ml-1 mt-1">
+          </v-img>
         <v-slide-group
           color="primary"
         >
           <v-slide-item
             v-for="itemMenu in menu"
             :key="itemMenu.id"
-            v-slot="{ active, toggle }"
+            v-slot="{ active }"
           >
             <v-btn
               class="mx-2 text-capitalize white--text"
               :input-value="active"
               active-class="transparent white--text"
               text
-              @click="toggle"
+              @click="changeRoute(itemMenu.path)"
             >
                 {{itemMenu.name}}
             </v-btn>
@@ -37,6 +38,7 @@
 <script>
 import { mapActions, mapGetters } from 'vuex';
 import Profile from './Profile.vue'
+import router from '@/router';
 
 export default {
   components:{
@@ -50,10 +52,12 @@ export default {
       {
         id: 1,
         name: 'Produtos',
+        path: `/produtos`
       },
       {
         id: 2,
         name: 'Categorias',
+        path: `/categoria`
       },
       {
         id: 3,
@@ -75,6 +79,9 @@ export default {
   },
   methods: {
     ...mapActions('authentication', ['nextStep']),
+    changeRoute(path){
+      router.push(path);
+    }
   },
 };
 </script>

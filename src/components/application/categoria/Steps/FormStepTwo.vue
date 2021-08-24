@@ -1,148 +1,48 @@
 <template>
-  <v-row class="pa-12">
-    <v-col cols=12 class="d-flex pa-1">
-      <InputAndLabelForm>
-        <v-col cols=3>
-          <LabelForm>
-            Código
-          </LabelForm>
-        </v-col>
-        <v-col cols=9>
-          <v-text-field
-            class="ml-8"
-            name="email"
-            placeholder="Código"
-            validate-on-blur
-            filled
-          ></v-text-field>
-        </v-col>
-      </InputAndLabelForm>
-    </v-col>
-    <v-col cols=12 class="d-flex pa-1">
-      <InputAndLabelForm>
-        <v-col cols=3>
-          <LabelForm>
-            Nome
-          </LabelForm>
-        </v-col>
-        <v-col cols=9>
-          <v-text-field
-            class="ml-8"
-            name="nome"
-            placeholder="Nome"
-            validate-on-blur
-            filled
-          ></v-text-field>
-        </v-col>
-      </InputAndLabelForm>
-    </v-col>
-    <v-col cols=12 class="d-flex pa-1">
-      <InputAndLabelForm>
-        <v-col cols=3>
-          <LabelForm>
-            Código da categoria pai
-          </LabelForm>
-        </v-col>
-        <v-col cols=9>
-          <v-text-field
-            class="ml-8"
-            name="nome"
-            placeholder="Código da categoria pai"
-            validate-on-blur
-            filled
-          ></v-text-field>
-        </v-col>
-      </InputAndLabelForm>
-    </v-col>
-    <v-col cols=12>
-      <InputAndLabelForm>
-        <v-col cols=3>
-          <LabelForm>
-            Descrição
-          </LabelForm>
-        </v-col>
-        <v-col cols=9>
-          <v-text-field
-            class="ml-8"
-            name="nome"
-            placeholder="Descrição"
-            validate-on-blur
-            filled
-          ></v-text-field>
-        </v-col>
-      </InputAndLabelForm>
-    </v-col>
-    <v-col cols=12>
-      <InputAndLabelForm>
-        <v-col cols=3>
-          <LabelForm>
-            Google ID
-          </LabelForm>
-        </v-col>
-        <v-col cols=9>
-          <v-text-field
-            class="ml-8"
-            name="nome"
-            placeholder="Google ID"
-            validate-on-blur
-            filled
-          ></v-text-field>
-        </v-col>
-      </InputAndLabelForm>
-    </v-col>
-    <v-col cols=12>
-      <InputAndLabelForm>
-        <v-col cols=3>
-          <LabelForm>
-            Plataforma
-          </LabelForm>
-        </v-col>
-        <v-col cols=9>
-          <v-text-field
-            class="ml-8"
-            name="nome"
-            placeholder="Plataforma"
-            validate-on-blur
-            filled
-          ></v-text-field>
-        </v-col>
-      </InputAndLabelForm>
-    </v-col>
-    <v-col cols=12>
-      <InputAndLabelForm>
-        <v-col cols=3>
-          <LabelForm>
-            Código da plataforma
-          </LabelForm>
-        </v-col>
-        <v-col cols=9>
-          <v-text-field
-            class="ml-8"
-            name="nome"
-            placeholder="Código da plataforma"
-            validate-on-blur
-            filled
-          ></v-text-field>
-        </v-col>
-      </InputAndLabelForm>
-    </v-col>
-    <v-col cols=12>
-      <InputAndLabelForm>
-        <v-col cols=3>
-          <LabelForm>
-            Código da categoria na plataforma
-          </LabelForm>
-        </v-col>
-        <v-col cols=9>
-          <v-text-field
-            class="ml-8"
-            name="nome"
-            placeholder="Código da categoria na plataforma"
-            validate-on-blur
-            filled
-          ></v-text-field>
-        </v-col>
-      </InputAndLabelForm>
+  <v-row class="pa-2">
+    <v-col cols=12 class="d-flex flex-column pa-1">
+      <v-tabs
+        v-model="tab"
+        background-color="transparent"
+        color="primary"
+      >
+        <v-tab v-for="item in items" :key="item">
+          {{item}}
+        </v-tab>
+      </v-tabs>
+      <v-tabs-items v-model="tab">
+        <v-tab-item>
+          <v-card
+            color="basil"
+            flat
+            class="pa-0 ma-0"
+          >
+            <v-card-text>
+              <BrandsCards/>
+            </v-card-text>
+          </v-card>
+        </v-tab-item>
+        <v-tab-item>
+          <v-card
+            color="basil"
+            flat
+          >
+            <v-card-text>
+              <KoerichCards/>
+            </v-card-text>
+          </v-card>
+        </v-tab-item>
+        <v-tab-item>
+          <v-card
+            color="basil"
+            flat
+          >
+            <v-card-text>
+              <Billet/>
+            </v-card-text>
+          </v-card>
+        </v-tab-item>
+      </v-tabs-items>
     </v-col>
     <v-col cols=12 class="d-flex justify-space-between mt-0">
        <v-btn
@@ -153,6 +53,17 @@
       >
         Salvar e continuar
       </v-btn>
+
+      <v-btn
+        depressed
+        large
+        text
+        outlined
+        color="primary"
+        @click="save()"
+      >
+        EXCLUIR CATEGORIA
+      </v-btn>
     </v-col>
   </v-row> 
 </template>
@@ -161,15 +72,21 @@
 <script>
 
 import { mapActions } from 'vuex';
-import LabelForm from '@/components/template/label/LabelForm.vue'
-import InputAndLabelForm from '@/components/template/label/InputAndLabelForm.vue'
+import BrandsCards from './cards-components/BrandsCards.vue'
+import KoerichCards from './cards-components/KoerichCards.vue'
+import Billet from './cards-components/Billet.vue'
 
 export default {
   components:{
-    LabelForm,
-    InputAndLabelForm
+    BrandsCards,
+    KoerichCards,
+    Billet
   },
   data: () => ({
+    tab: null,
+    items: [
+          'CARTÃO BANDEIRADOS', 'CARTÃO KOERICH', 'BOLETO',
+        ]
   }),
   computed: {
   },

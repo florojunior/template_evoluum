@@ -1,5 +1,5 @@
 <template>
-  <v-row class="pa-12">
+  <v-row class="pa-2">
     <v-col cols=12 class="d-flex pa-1">
       <InputAndLabelForm>
         <v-col cols=3>
@@ -152,6 +152,17 @@
         @click="save()"
       >
         Salvar e continuar
+      </v-btn>
+
+      <v-btn
+        depressed
+        large
+        text
+        outlined
+        color="primary"
+        @click="save()"
+      >
+        EXCLUIR CATEGORIA
       </v-btn>
     </v-col>
   </v-row> 

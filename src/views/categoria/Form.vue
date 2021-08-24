@@ -1,6 +1,6 @@
 <template>
     <v-container
-      class="box-content"
+      class="box-content pa-0"
       fill-height>
       <Form/>
     </v-container>   
@@ -27,6 +27,6 @@ export default {
 </script>
 
 <style>
-.box-content{background-color: #f8f8f8; height: calc(100% - 160px);margin-top: 130px
+.box-content{background-color: rgb(237, 237, 237); height: calc(100% - 160px);margin-top: 130px
 }
 </style>

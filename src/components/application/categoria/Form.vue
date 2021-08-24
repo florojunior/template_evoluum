@@ -1,18 +1,14 @@
 <template>
-  <v-container class="fill-height" >
-    <div style="height: 100%; width: 100%">
-      <v-row class="d-flex justify-start align-start">
-        <v-col cols=3>
-          <StepController/>
-        </v-col>
-        <v-col cols=9>
-          <FormStepOne v-if="getCurrentStep == 1"/>
-          <FormStepTwo v-if="getCurrentStep == 2"/>
-          <FormStepThree v-if="getCurrentStep == 3"/>
-        </v-col>
-      </v-row>
-    </div>
-  </v-container>
+  <v-row class="d-flex justify-start align-start pa-0" style="height: 100%; width: 100%; background-color=rgb(237, 237, 237)">
+    <v-col cols=3>
+      <StepController/>
+    </v-col>
+    <v-col cols=9 style="background-color: #FFFFFF" class="mt-8 pa-12">
+      <FormStepOne v-if="getCurrentStep == 1"/>
+      <FormStepTwo v-if="getCurrentStep == 2"/>
+      <FormStepThree v-if="getCurrentStep == 3"/>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -105,11 +101,16 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
   .list-content{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
   }
+
+  .v-tab--disabled{
+    color: red !important
+  }
+  
 </style>
