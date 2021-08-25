@@ -3,11 +3,9 @@
       <div class="background">
         <div class="background-custom">
           <v-img
-              :src="require('../../assets/images/header-image.png').default"
-              max-width="156px"
-              max-heigth="54px"
-              class="ml-8 mt-8">
+              :src="require('../../assets/images/background-defalt.png').default">
           </v-img>
+          <div class="bottom-div"></div>
         </div>
         <v-img
             :src="require('../../assets/images/figura_painel.png').default"
@@ -92,5 +90,23 @@ export default {
     position: absolute;
     height: 40%;
     margin-bottom: 50px;
+}
+
+.bottom-div {
+    width: 100%;
+    padding-bottom: 21.27%; /* = width / 1.41 */
+    position: relative;
+}
+
+.bottom-div:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0079C6;
+    transform-Origin: 0 100%;        
+    transform: rotate(45deg);
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-grow-1 justify-center align-content-center">
+  <div class="d-flex">
     <Menu></Menu>
     <router-view></router-view>
     <Modal />

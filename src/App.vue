@@ -16,5 +16,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+ #app{
+   font-family: Rounded, Helvetica, sans-serif !important;
+ }
 </style>

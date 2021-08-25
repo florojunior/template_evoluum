@@ -2,16 +2,16 @@
   <v-row class="pa-12">
     <v-col cols=6 class="d-flex pa-1 align-center">
         <InputAndLabelForm>
-        <v-col cols=4>
+        <v-col cols=6 xl=2 lg=3>
           <LabelForm>
             Data Inicial
           </LabelForm>
         </v-col>
-        <v-col cols=8>
+        <v-col cols=6 xl=10 lg=9>
           <v-text-field
             class="ml-2 mr-2"
             name="nome"
-            placeholder="Código da categoria na plataforma"
+            placeholder="Data Inicial"
             validate-on-blur
             filled
           ></v-text-field>
@@ -20,16 +20,16 @@
     </v-col>
     <v-col cols=6 class="d-flex pa-1">
         <InputAndLabelForm>
-        <v-col cols=4>
+        <v-col cols=6 xl=2 lg=3>
           <LabelForm>
             Data final
           </LabelForm>
         </v-col>
-        <v-col cols=8>
+        <v-col cols=6 xl=10 lg=9>
           <v-text-field
             class="ml-2 mr-2"
             name="nome"
-            placeholder="Código da categoria na plataforma"
+            placeholder="Data final"
             validate-on-blur
             filled
           ></v-text-field>
@@ -38,16 +38,16 @@
     </v-col>
     <v-col cols=6 class="d-flex pa-1">
         <InputAndLabelForm>
-        <v-col cols=4>
+        <v-col cols=6 xl=2 lg=3>
           <LabelForm>
              Valor minimo parcelamento
           </LabelForm>
         </v-col>
-        <v-col cols=8>
+        <v-col cols=6 xl=10 lg=9>
           <v-text-field
             class="ml-2 mr-2"
             name="nome"
-            placeholder="Código da categoria na plataforma"
+            placeholder="Valor minimo parcelamento"
             validate-on-blur
             filled
           ></v-text-field>
@@ -56,16 +56,16 @@
     </v-col>
     <v-col cols=6 class="d-flex pa-1">
         <InputAndLabelForm>
-        <v-col cols=4>
+        <v-col cols=6 xl=2 lg=3>
           <LabelForm>
             Nº máximo de parcelas
           </LabelForm>
         </v-col>
-        <v-col cols=8>
+        <v-col cols=6 xl=10 lg=9>
           <v-text-field
             class="ml-2 mr-2"
             name="nome"
-            placeholder="Código da categoria na plataforma"
+            placeholder="Nº máximo de parcelas"
             validate-on-blur
             filled
           ></v-text-field>

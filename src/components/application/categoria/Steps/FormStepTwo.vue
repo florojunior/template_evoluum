@@ -45,14 +45,27 @@
       </v-tabs-items>
     </v-col>
     <v-col cols=12 class="d-flex justify-space-between mt-0">
-       <v-btn
-        depressed
-        large
-        color="primary"
-        @click="save()"
-      >
-        Salvar e continuar
-      </v-btn>
+      <span>
+        <v-btn
+          depressed
+          large
+          text
+          outlined
+          color="primary"
+          @click="back()"
+        >
+          VOLTAR
+        </v-btn>
+        <v-btn
+          depressed
+          large
+          color="primary"
+          @click="save()"
+        >
+          Salvar e continuar
+        </v-btn>
+      </span>
+       
 
       <v-btn
         depressed
@@ -93,9 +106,12 @@ export default {
   created: function () {
   },
   methods: {
-    ...mapActions('categoria', ['nextStep']),
+    ...mapActions('categoria', ['nextStep', 'backStep']),
     save(){
-      this.nextStep(2);
+      this.nextStep(3);
+    },
+    back(){
+      this.backStep(1);
     }
   },
 };

@@ -1,5 +1,5 @@
 <template>
-  <v-row class="pa-12">
+  <v-row class="pa-0">
     <v-col cols=12 class="d-flex pa-1">
       <InputAndLabelForm>
         <v-col cols=2>
@@ -132,12 +132,44 @@
         </v-col>
       </InputAndLabelForm>
     </v-col>
+    <v-col cols=12 class="d-flex justify-space-between mt-0">
+      <span>
+        <v-btn
+            depressed
+            large
+            text
+            outlined
+            color="primary"
+            @click="back()"
+          >
+            VOLTAR
+          </v-btn>
+        <v-btn
+          depressed
+          large
+          color="primary"
+          @click="save()"
+        >
+          Salvar
+        </v-btn>
+      </span>
+      <v-btn
+        depressed
+        large
+        text
+        outlined
+        color="primary"
+        @click="save()"
+      >
+        EXCLUIR CATEGORIA
+      </v-btn>
+    </v-col>
   </v-row> 
 </template>
 
 
 <script>
-
+import { mapActions } from 'vuex';
 import LabelForm from '@/components/template/label/LabelForm.vue'
 import InputAndLabelForm from '@/components/template/label/InputAndLabelForm.vue'
 
@@ -153,6 +185,14 @@ export default {
   created: function () {
   },
   methods: {
+    ...mapActions('categoria', ['nextStep', 'backStep']),
+    save(){
+      this.nextStep(3);
+    },
+    back(){
+      this.backStep(2);
+    }
+    
   },
 };
 </script>

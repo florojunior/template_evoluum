@@ -2,12 +2,12 @@
   <v-row class="pa-2">
     <v-col cols=12 class="d-flex pa-1">
       <InputAndLabelForm>
-        <v-col cols=3>
+        <v-col cols=6 xl=2 lg=2>
           <LabelForm>
-            Código
+            Código *
           </LabelForm>
         </v-col>
-        <v-col cols=9>
+        <v-col cols=6 xl=10 lg=10>
           <v-text-field
             class="ml-8"
             name="email"
@@ -20,12 +20,12 @@
     </v-col>
     <v-col cols=12 class="d-flex pa-1">
       <InputAndLabelForm>
-        <v-col cols=3>
+        <v-col cols=6 xl=2 lg=2>
           <LabelForm>
-            Nome
+            Nome *
           </LabelForm>
         </v-col>
-        <v-col cols=9>
+        <v-col cols=6 xl=10 lg=10>
           <v-text-field
             class="ml-8"
             name="nome"
@@ -38,12 +38,12 @@
     </v-col>
     <v-col cols=12 class="d-flex pa-1">
       <InputAndLabelForm>
-        <v-col cols=3>
+        <v-col cols=6 xl=2 lg=2>
           <LabelForm>
             Código da categoria pai
           </LabelForm>
         </v-col>
-        <v-col cols=9>
+         <v-col cols=6 xl=10 lg=10>
           <v-text-field
             class="ml-8"
             name="nome"
@@ -54,14 +54,14 @@
         </v-col>
       </InputAndLabelForm>
     </v-col>
-    <v-col cols=12>
+    <v-col cols=12 class="d-flex pa-1">
       <InputAndLabelForm>
-        <v-col cols=3>
+        <v-col cols=6 xl=2 lg=2>
           <LabelForm>
-            Descrição
+            Descrição *
           </LabelForm>
         </v-col>
-        <v-col cols=9>
+        <v-col cols=6 xl=10 lg=10>
           <v-text-field
             class="ml-8"
             name="nome"
@@ -72,14 +72,14 @@
         </v-col>
       </InputAndLabelForm>
     </v-col>
-    <v-col cols=12>
+    <v-col  cols=12 class="d-flex pa-1">
       <InputAndLabelForm>
-        <v-col cols=3>
+        <v-col cols=6 xl=2 lg=2>
           <LabelForm>
             Google ID
           </LabelForm>
         </v-col>
-        <v-col cols=9>
+        <v-col cols=6 xl=10 lg=10>
           <v-text-field
             class="ml-8"
             name="nome"
@@ -90,14 +90,14 @@
         </v-col>
       </InputAndLabelForm>
     </v-col>
-    <v-col cols=12>
+    <v-col cols=12 class="d-flex pa-1">
       <InputAndLabelForm>
-        <v-col cols=3>
+        <v-col cols=6 xl=2 lg=2>
           <LabelForm>
             Plataforma
           </LabelForm>
         </v-col>
-        <v-col cols=9>
+        <v-col cols=6 xl=10 lg=10>
           <v-text-field
             class="ml-8"
             name="nome"
@@ -108,14 +108,14 @@
         </v-col>
       </InputAndLabelForm>
     </v-col>
-    <v-col cols=12>
+    <v-col cols=12 class="d-flex pa-1">
       <InputAndLabelForm>
-        <v-col cols=3>
+        <v-col cols=6 xl=2 lg=2>
           <LabelForm>
             Código da plataforma
           </LabelForm>
         </v-col>
-        <v-col cols=9>
+        <v-col cols=6 xl=10 lg=10>
           <v-text-field
             class="ml-8"
             name="nome"
@@ -126,14 +126,14 @@
         </v-col>
       </InputAndLabelForm>
     </v-col>
-    <v-col cols=12>
+    <v-col cols=12 class="d-flex pa-1">
       <InputAndLabelForm>
-        <v-col cols=3>
+        <v-col cols=6 xl=2 lg=2>
           <LabelForm>
             Código da categoria na plataforma
           </LabelForm>
         </v-col>
-        <v-col cols=9>
+        <v-col cols=6 xl=10 lg=10>
           <v-text-field
             class="ml-8"
             name="nome"
@@ -189,7 +189,7 @@ export default {
   methods: {
     ...mapActions('categoria', ['nextStep']),
     save(){
-      this.nextStep(1);
+      this.nextStep(2);
     }
   },
 };

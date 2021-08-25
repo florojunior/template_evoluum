@@ -40,10 +40,9 @@
                 <v-col cols="12 pa-0 ma-0 pt-1">
                   <a class="primary--text">Recuperar senha</a>
                 </v-col>
-                <v-col cols="12 pa-0 ma-0 pt-0">
+                <v-col cols="12 pa-0 ma-0 pt-0 d-flex align-center">
                   <v-checkbox
-                    :label="`Manter conectado`"
-                  ></v-checkbox>
+                  ></v-checkbox><span>Manter conectado</span>
                 </v-col>
                 <v-col cols="12 pa-0 ma-0 pt-0">
                   <v-btn

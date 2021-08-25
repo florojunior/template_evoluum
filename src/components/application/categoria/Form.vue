@@ -1,9 +1,9 @@
 <template>
-  <v-row class="d-flex justify-start align-start pa-0" style="height: 100%; width: 100%; background-color=rgb(237, 237, 237)">
-    <v-col cols=3>
+  <v-row class="d-flex justify-start align-start pa-0" style="height: 100%; width: 100%; background-color:#EDEDED !important">
+    <v-col cols=3 xl=2>
       <StepController/>
     </v-col>
-    <v-col cols=9 style="background-color: #FFFFFF" class="mt-8 pa-12">
+    <v-col cols=9 xl=10 style="background-color: #FFFFFF;max-height: 100%;" class="mt-8 pa-6">
       <FormStepOne v-if="getCurrentStep == 1"/>
       <FormStepTwo v-if="getCurrentStep == 2"/>
       <FormStepThree v-if="getCurrentStep == 3"/>

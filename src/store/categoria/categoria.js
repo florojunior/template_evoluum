@@ -9,15 +9,15 @@ const state = {
     steps:[
       {
         isState: 1,
-        title: "Informações Gerais"
+        title: "INFORMAÇÕES GERAIS"
       },
       {
         isState: 2,
-        title: "Cartões e Boleto"
+        title: "CARTÕES E BOLETO"
       },
       {
         isState: 3,
-        title: "Selo"
+        title: "SELO"
       }]
     ,
     activeStep: 1
