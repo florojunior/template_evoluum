@@ -5,7 +5,6 @@
           <v-img
               :src="require('../../assets/images/background-defalt.png').default">
           </v-img>
-          <div class="bottom-div"></div>
         </div>
         <v-img
             :src="require('../../assets/images/figura_painel.png').default"

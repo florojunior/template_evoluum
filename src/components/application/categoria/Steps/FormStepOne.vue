@@ -1,5 +1,5 @@
 <template>
-  <v-row class="pa-2">
+  <v-row class="pa-6">
     <v-col cols=12 class="d-flex pa-1">
       <InputAndLabelForm>
         <v-col cols=6 xl=2 lg=2>
@@ -144,27 +144,6 @@
         </v-col>
       </InputAndLabelForm>
     </v-col>
-    <v-col cols=12 class="d-flex justify-space-between mt-0">
-       <v-btn
-        depressed
-        large
-        color="primary"
-        @click="save()"
-      >
-        Salvar e continuar
-      </v-btn>
-
-      <v-btn
-        depressed
-        large
-        text
-        outlined
-        color="primary"
-        @click="save()"
-      >
-        EXCLUIR CATEGORIA
-      </v-btn>
-    </v-col>
   </v-row> 
 </template>
 
@@ -196,6 +175,6 @@ export default {
 </script>
 
 <style>
-.box-content{background-color: #f8f8f8; height: calc(100% - 160px);margin-top: 130px
+.box-content{background-color: rgba(248,248,248,255);  height: calc(100% - 160px);margin-top: 130px
 }
 </style>

@@ -1,8 +1,8 @@
 export const actions = {
-  nextStep(state, step) {
-    state.commit('goToStep', step);
+  nextStep(state) {
+    state.commit('goToStep');
   },
-  backStep(state, step) {
-    state.commit('goToStep', step);
+  goBackStep(state) {
+    state.commit('goBackStep');
   }
 };

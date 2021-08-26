@@ -8,6 +8,7 @@
         <v-col cols=12 class="d-flex justify-space-between">
           <v-text-field
               dense
+              v-model="search"
               style="max-width: 400px"
               filled
               label="Pesquisar por categorias"
@@ -29,6 +30,7 @@
           <v-data-table
             :headers="headers"
             :items="desserts"
+            :search="search"
             :items-per-page="5"
             class="elevation-1"
           >
@@ -56,11 +58,12 @@ export default {
       EditButton
   },
   data: () => ({
+    search: "",
     headers: [
       {
         text: 'Código',
         align: 'start',
-        sortable: false,
+        sortable: true,
         value: 'codigo',
       },
       { text: 'Nome', value: 'nome' },

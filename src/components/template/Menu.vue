@@ -26,7 +26,10 @@
               text
               @click="changeRoute(itemMenu.path)"
             >
+              <span class="font-weight-medium text-subtitle-1">
                 {{itemMenu.name}}
+              </span>
+                
             </v-btn>
           </v-slide-item>
         </v-slide-group>

@@ -1,13 +1,13 @@
 <template>
-  <v-row class="pa-0">
+  <v-row class="pa-6">
     <v-col cols=12 class="d-flex pa-1">
       <InputAndLabelForm>
-        <v-col cols=2>
+        <v-col cols=6 xl=1 lg=1 class="pa-0 pl-2">
           <LabelForm>
             Tipo do selo
           </LabelForm>
         </v-col>
-        <v-col cols=10>
+        <v-col cols=6 xl=10 lg=10>
           <v-text-field
             class="ml-8"
             name="tipoSelo"
@@ -20,12 +20,12 @@
     </v-col>
     <v-col cols=12 class="d-flex pa-1">
       <InputAndLabelForm>
-        <v-col cols=2>
+        <v-col cols=6 xl=1 lg=1 class="pa-0 pl-2">
           <LabelForm>
             Descrição
           </LabelForm>
         </v-col>
-        <v-col cols=10>
+        <v-col cols=6 xl=10 lg=10>
           <v-text-field
             class="ml-8"
             name="tipoSelo"
@@ -38,7 +38,7 @@
     </v-col>
     <v-col cols=12 class="d-flex pa-1">
       <InputAndLabelForm>
-        <v-col cols=2>
+        <v-col cols=6 xl=1 lg=1 class="pa-0 pl-2">
           <LabelForm>
             Valor
           </LabelForm>
@@ -54,19 +54,19 @@
         </v-col>
       </InputAndLabelForm>
     </v-col>
-    <v-col cols=12 class="pl-1">
+    <v-col cols=12 class="pl-0 pb-8">
       <h2 class="text--disabled">Propriedades</h2>
     </v-col>
     <v-col cols=6 class="d-flex pa-1">
         <InputAndLabelForm>
-        <v-col cols=4>
+        <v-col cols=6 xl=2 lg=2 class="pa-0 pl-2">
           <LabelForm>
             Prioridade
           </LabelForm>
         </v-col>
-        <v-col cols=8>
+        <v-col cols=6 xl=7 lg=7>
           <v-text-field
-            class="ml-2 mr-2"
+            class="ml-6 mr-2"
             name="nome"
             placeholder="Prioridade"
             validate-on-blur
@@ -77,14 +77,14 @@
     </v-col>
     <v-col cols=6 class="d-flex pa-1">
         <InputAndLabelForm>
-        <v-col cols=4>
+        <v-col cols=6 xl=3 lg=3 class="pa-0 pl-2">
           <LabelForm>
             Cor de fundo
           </LabelForm>
         </v-col>
-        <v-col cols=8>
+        <v-col cols=6 xl=7 lg=7>
           <v-text-field
-            class="ml-2 mr-2"
+            class="ml-6 mr-2"
             name="nome"
             placeholder="Cor de fundo"
             validate-on-blur
@@ -93,19 +93,19 @@
         </v-col>
       </InputAndLabelForm>
     </v-col>
-    <v-col cols=12 class="pl-1">
+    <v-col cols=12 class="pl-0 pb-8">
       <h2 class="text--disabled">Vencimento</h2>
     </v-col>
     <v-col cols=6 class="d-flex pa-1">
         <InputAndLabelForm>
-        <v-col cols=4>
+        <v-col cols=6 xl=2 lg=2 class="pa-0 pl-2">
           <LabelForm>
             Data inicial
           </LabelForm>
         </v-col>
-        <v-col cols=8>
+        <v-col cols=6 xl=7 lg=7>
           <v-text-field
-            class="ml-2 mr-2"
+            class="ml-6 mr-2"
             name="nome"
             placeholder="Data inicial"
             validate-on-blur
@@ -116,14 +116,14 @@
     </v-col>
     <v-col cols=6 class="d-flex pa-1">
         <InputAndLabelForm>
-        <v-col cols=4>
+        <v-col cols=6 xl=3 lg=3 class="pa-0 pl-2">
           <LabelForm>
             Data final
           </LabelForm>
         </v-col>
-        <v-col cols=8>
+        <v-col cols=6 xl=7 lg=7>
           <v-text-field
-            class="ml-2 mr-2"
+            class="ml-6 mr-2"
             name="nome"
             placeholder="Data final"
             validate-on-blur
@@ -131,38 +131,6 @@
           ></v-text-field>
         </v-col>
       </InputAndLabelForm>
-    </v-col>
-    <v-col cols=12 class="d-flex justify-space-between mt-0">
-      <span>
-        <v-btn
-            depressed
-            large
-            text
-            outlined
-            color="primary"
-            @click="back()"
-          >
-            VOLTAR
-          </v-btn>
-        <v-btn
-          depressed
-          large
-          color="primary"
-          @click="save()"
-        >
-          Salvar
-        </v-btn>
-      </span>
-      <v-btn
-        depressed
-        large
-        text
-        outlined
-        color="primary"
-        @click="save()"
-      >
-        EXCLUIR CATEGORIA
-      </v-btn>
     </v-col>
   </v-row> 
 </template>
@@ -198,6 +166,6 @@ export default {
 </script>
 
 <style>
-.box-content{background-color: #f8f8f8; height: calc(100% - 160px);margin-top: 130px
+.box-content{background-color: rgba(248,248,248,255);  height: calc(100% - 160px);margin-top: 130px
 }
 </style>

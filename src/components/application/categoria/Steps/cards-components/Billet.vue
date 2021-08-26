@@ -1,13 +1,13 @@
 <template>
-  <v-row class="pa-12">
+  <v-row class="pa-4">
     <v-col cols=6 class="d-flex pa-1 align-center">
         <InputAndLabelForm>
-        <v-col cols=6 xl=2 lg=3>
+        <v-col cols=6 xl=3 lg=3>
           <LabelForm>
             Data Inicial *
           </LabelForm>
         </v-col>
-        <v-col cols=6 xl=10 lg=9>
+        <v-col cols=6 xl=7 lg=7>
           <v-text-field
             class="ml-2 pr-6"
             name="nome"
@@ -20,12 +20,12 @@
     </v-col>
     <v-col cols=6 class="d-flex pa-1 align-center">
         <InputAndLabelForm>
-        <v-col cols=6 xl=2 lg=3>
+        <v-col cols=6 xl=3 lg=3>
           <LabelForm>
             Data final *
           </LabelForm>
         </v-col>
-        <v-col cols=6 xl=10 lg=9>
+        <v-col cols=6 xl=7 lg=7>
           <v-text-field
             class="ml-2 pr-6"
             name="nome"
@@ -38,12 +38,12 @@
     </v-col>
     <v-col cols=6 class="d-flex pa-1 align-center">
         <InputAndLabelForm>
-        <v-col cols=6 xl=2 lg=3>
+        <v-col cols=6 xl=3 lg=3>
           <LabelForm>
              Descontos *
           </LabelForm>
         </v-col>
-        <v-col cols=6 xl=10 lg=9>
+        <v-col cols=6 xl=7 lg=7>
           <v-text-field
             class="ml-2 pr-6"
             name="nome"

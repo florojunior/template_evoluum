@@ -1,20 +1,22 @@
 <template>
-  <v-row class="d-flex justify-start align-start pa-0" style="height: 100%; width: 100%; background-color:#EDEDED !important">
-    <v-col cols=3 xl=2>
+  <v-row class="d-flex justify-start align-start pa-8" style="height: 100%; width: 100%; background-color:#EDEDED !important;">
+    <v-col cols=3 xl=3>
       <StepController/>
     </v-col>
-    <v-col cols=9 xl=10 style="background-color: #FFFFFF;max-height: 100%;" class="mt-8 pa-6">
+    <v-col cols=9 xl=9 style="max-height: 100%; border-radius: 15px" class="mt-8 pa-6 background-default">
       <FormStepOne v-if="getCurrentStep == 1"/>
       <FormStepTwo v-if="getCurrentStep == 2"/>
       <FormStepThree v-if="getCurrentStep == 3"/>
     </v-col>
+    <StepActions/>
   </v-row>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 
 import StepController from '../categoria/Steps/StepController.vue'
+import StepActions from '../categoria/Steps/StepActions.vue'
 import FormStepOne from '../categoria/Steps/FormStepOne.vue'
 import FormStepTwo from '../categoria/Steps/FormStepTwo.vue'
 import FormStepThree from '../categoria/Steps/FormStepThree.vue'
@@ -24,7 +26,8 @@ export default {
       StepController,
       FormStepOne,
       FormStepTwo,
-      FormStepThree
+      FormStepThree,
+      StepActions
   },
   data: () => ({
     headers: [
@@ -97,6 +100,7 @@ export default {
   created: function () {
   },  
   methods:{
+    ...mapActions('categoria', ['nextStep','goBackStep']),
   }
 };
 </script>
@@ -107,6 +111,10 @@ export default {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+  }
+
+  .background-default{
+    background-color: rgba(245,245,246,255) !important;
   }
 
   .v-tab--disabled{

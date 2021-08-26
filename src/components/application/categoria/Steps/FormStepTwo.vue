@@ -13,7 +13,7 @@
       <v-tabs-items v-model="tab">
         <v-tab-item>
           <v-card
-            color="basil"
+            color="rgba(248,248,248,255)"
             flat
             class="pa-0 ma-0"
           >
@@ -24,7 +24,7 @@
         </v-tab-item>
         <v-tab-item>
           <v-card
-            color="basil"
+            color="rgba(248,248,248,255)"
             flat
           >
             <v-card-text>
@@ -34,7 +34,7 @@
         </v-tab-item>
         <v-tab-item>
           <v-card
-            color="basil"
+            color="rgba(248,248,248,255)"
             flat
           >
             <v-card-text>
@@ -43,40 +43,6 @@
           </v-card>
         </v-tab-item>
       </v-tabs-items>
-    </v-col>
-    <v-col cols=12 class="d-flex justify-space-between mt-0">
-      <span>
-        <v-btn
-          depressed
-          large
-          text
-          outlined
-          color="primary"
-          @click="back()"
-        >
-          VOLTAR
-        </v-btn>
-        <v-btn
-          depressed
-          large
-          color="primary"
-          @click="save()"
-        >
-          Salvar e continuar
-        </v-btn>
-      </span>
-       
-
-      <v-btn
-        depressed
-        large
-        text
-        outlined
-        color="primary"
-        @click="save()"
-      >
-        EXCLUIR CATEGORIA
-      </v-btn>
     </v-col>
   </v-row> 
 </template>
@@ -118,6 +84,6 @@ export default {
 </script>
 
 <style>
-.box-content{background-color: #f8f8f8; height: calc(100% - 160px);margin-top: 130px
+.box-content{background-color: rgba(248,248,248,255);  height: calc(100% - 160px);margin-top: 130px
 }
 </style>

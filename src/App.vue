@@ -16,7 +16,22 @@ export default {
 </script>
 
 <style lang="scss">
- #app{
-   font-family: Rounded, Helvetica, sans-serif !important;
+ 
+ .v-application .text-lg-subtitle-1{
+   font-family: 'GothamRoundedBold' !important;
+   font-size: 19px !important;
  }
+
+  .v-application .text-md-subtitle-1{
+   font-family: 'GothamRoundedBold' !important;
+ }
+
+  .v-application{
+   font-family: 'GothamRoundedBold';
+ }
+
+ @font-face {
+    font-family: GothamRoundedBold, Courier, monospace !important;
+    src:url("/assets/fonts/GothamRoundedBold.ttf");
+}
 </style>
